@@ -11,7 +11,7 @@
     </div>
     <script>
         var arrayNum = [
-            [0,1,2],
+            ['',1,2],
             [3,4,5],
             [6,7,8]
         ];
@@ -23,14 +23,15 @@
         
             
             for(a=0;a<arrayNum.length;a++){
+                var rowDiv = document.createElement('div');
+                rowDiv.className='row';
                 for(b=0;b<arrayNum[a].length;b++){
-                    var newDiv = document.createElement('div');
-                    newDiv.style.flexDirection='row';
-                    newDiv.textContent = arrayNum[a][b];
-                    newDiv.style.border="2px solid skyblue";
-                    mainDiv.appendChild(newDiv);
+                    var colDiv = document.createElement('div');
+                    colDiv.className='col';
+                    colDiv.textContent = arrayNum[a][b];
+                    rowDiv.appendChild(colDiv);
                 }
-                
+                mainDiv.appendChild(rowDiv);
             }
         
         });
@@ -38,3 +39,19 @@
         </script>
 </body>
 </html>
+<style>
+    .row {
+        display: flex;
+        border: 1px solid black;
+        margin-bottom: 10px;
+    }
+    .col {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+</style>
