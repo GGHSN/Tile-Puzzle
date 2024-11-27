@@ -15,6 +15,8 @@
             [3,4,5],
             [6,7,8]
         ];
+
+        var arrayTemp = [];
         
         document.addEventListener("DOMContentLoaded", function() {
             var mainDiv = document.getElementById('mainDiv');
@@ -30,6 +32,24 @@
                     colDiv.className='col';
                     colDiv.textContent = arrayNum[a][b];
                     rowDiv.appendChild(colDiv);
+                    
+                }
+                mainDiv.appendChild(rowDiv);
+            }
+
+             console.log(Math.ceil(Math.random() * 8));
+
+            for(a=0;a<arrayNum.length;a++){
+                var rowDiv = document.createElement('div');
+                rowDiv.className='row';
+                for(b=0;b<arrayNum[a].length;b++){
+                    var colDiv = document.createElement('div');
+                    colDiv.className='col';
+                    colDiv.textContent = arrayNum[a][b];
+                    rowDiv.appendChild(colDiv);
+                    while(){
+                        
+                    }
                 }
                 mainDiv.appendChild(rowDiv);
             }
