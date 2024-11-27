@@ -32,7 +32,6 @@
                     colDiv.className='col';
                     colDiv.textContent = arrayNum[a][b];
                     rowDiv.appendChild(colDiv);
-                    
                 }
                 mainDiv.appendChild(rowDiv);
             }
@@ -45,11 +44,14 @@
                 for(b=0;b<arrayNum[a].length;b++){
                     var colDiv = document.createElement('div');
                     colDiv.className='col';
-                    colDiv.textContent = arrayNum[a][b];
-                    rowDiv.appendChild(colDiv);
-                    while(){
-                        
+                    var randomNum = Math.ceil(Math.random() * 8);
+                    while(!arrayTemp.includes(randomNum)){
+                        randomNum = Math.ceil(Math.random() * 8);
                     }
+                    console.log(randomNum);
+                    colDiv.textContent = randomNum;
+                    rowDiv.appendChild(colDiv);
+                    arrayTemp.push(arrayNum[a][b]);
                 }
                 mainDiv.appendChild(rowDiv);
             }
