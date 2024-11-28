@@ -45,13 +45,10 @@
                     var colDiv = document.createElement('div');
                     colDiv.className='col';
                     var randomNum = Math.ceil(Math.random() * 8);
-                    while(!arrayTemp.includes(randomNum)){
-                        randomNum = Math.ceil(Math.random() * 8);
-                    }
-                    console.log(randomNum);
+                    console.log(arrayTemp);
                     colDiv.textContent = randomNum;
                     rowDiv.appendChild(colDiv);
-                    arrayTemp.push(arrayNum[a][b]);
+                    
                 }
                 mainDiv.appendChild(rowDiv);
             }
